@@ -6,8 +6,8 @@
   "main": "index.js",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve  --proxy-config ./proxy.json",
-    "server": "ts-node -P ./server/server.tsconfig.json ./server/server.ts",
+    "start": "ng serve --host 0.0.0.0 --proxy-config /app/proxy.json",
+    "server": "ts-node -P /server/src/server.tsconfig.json /server/src/server.ts",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -16,7 +16,8 @@
     "build:prod": "ng build --prod",
     "start:prod": "http-server ./dist -a localhost -p 4200",
     "build-and-start:prod": "run-s build:prod start:prod",
-    "e2e": "start-server-and-test build-and-start:prod http://localhost:4200 cypress:run"
+    "e2e": "start-server-and-test build-and-start:prod http://localhost:4200 cypress:run",
+    "nodemon": "node_modules/.bin/nodemon --inspect=0.0.0.0:9229 src/index.js"
   },
   "keywords": [],
   "author": "Scott Fredericksen",
@@ -40,7 +41,6 @@
     "http-server": "^0.11.1",
     "moment": "^2.22.2",
     "npm-run-all": "^4.1.5",
-    "nodemon": "node_modules/.bin/nodemon --inspect=0.0.0.0:9229 src/index.js",
     "rxjs": "6.5.2",
     "zone.js": "~0.9.1"
   },
