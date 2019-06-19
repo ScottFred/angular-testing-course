@@ -1,7 +1,9 @@
 {
   "name": "angular-testing-course",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "license": "MIT",
+  "description": "Udemy Angular Testing Course",
+  "main": "index.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve  --proxy-config ./proxy.json",
@@ -16,7 +18,8 @@
     "build-and-start:prod": "run-s build:prod start:prod",
     "e2e": "start-server-and-test build-and-start:prod http://localhost:4200 cypress:run"
   },
-  "private": true,
+  "keywords": [],
+  "author": "Scott Fredericksen",
   "dependencies": {
     "@angular/animations": "8.0.0",
     "@angular/cdk": "^8.0.0",
@@ -37,6 +40,7 @@
     "http-server": "^0.11.1",
     "moment": "^2.22.2",
     "npm-run-all": "^4.1.5",
+    "nodemon": "node_modules/.bin/nodemon --inspect=0.0.0.0:9229 src/index.js",
     "rxjs": "6.5.2",
     "zone.js": "~0.9.1"
   },
@@ -63,6 +67,11 @@
     "start-server-and-test": "^1.9.1",
     "ts-node": "~3.2.0",
     "tslint": "~5.7.0",
-    "typescript": "3.4.5"
+    "typescript": "3.4.5",
+    "nodemon": "1.19.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com:ScottFred/angular-testing-course.git"
   }
 }
